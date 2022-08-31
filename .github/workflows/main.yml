@@ -13,6 +13,6 @@ jobs:
       - name: Configuration
         run: |
           mkdir build
-          cmake -B build -DBLAS=Open -DCPU_ONLY=ON -DUSE_OPENCV=OFF -DUSE_LEVELDB -DUSE_LMDB=OFF -DBUILD_python=OFF -DBUILD_matlab
+          cmake -B build -DBLAS=Open -DCPU_ONLY=ON -DUSE_OPENCV=OFF -DUSE_LEVELDB=OFF -DUSE_LMDB=OFF -DBUILD_python=OFF -DBUILD_matlab=OFF
       - name: Build
         run: cmake --build build
