@@ -5,9 +5,9 @@ set(Caffe_DEFINITIONS "")
 set(Caffe_COMPILE_OPTIONS "")
 
 # ---[ Boost
-find_package(Boost 1.54 REQUIRED COMPONENTS system thread filesystem)
-list(APPEND Caffe_INCLUDE_DIRS PUBLIC ${Boost_INCLUDE_DIRS})
-list(APPEND Caffe_LINKER_LIBS PUBLIC ${Boost_LIBRARIES})
+# find_package(Boost 1.54 REQUIRED COMPONENTS system thread filesystem)
+# list(APPEND Caffe_INCLUDE_DIRS PUBLIC ${Boost_INCLUDE_DIRS})
+# list(APPEND Caffe_LINKER_LIBS PUBLIC ${Boost_LIBRARIES})
 
 # ---[ Threads
 find_package(Threads REQUIRED)
