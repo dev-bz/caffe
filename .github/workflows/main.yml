@@ -1,0 +1,18 @@
+name: CI
+on:
+  push:
+    branches: [ "win64" ]
+  pull_request:
+    branches: [ "win64" ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Configuration
+        run: |
+          mkdir build
+          cmake -B build -DBLAS=Open -DCPU_ONLY=ON -DUSE_OPENCV=OFF -DUSE_LEVELDB -DUSE_LMDB=OFF -DBUILD_python=OFF -DBUILD_matlab
+      - name: Build
+        run: cmake --build build
